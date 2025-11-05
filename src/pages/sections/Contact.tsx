@@ -18,46 +18,46 @@ export default function Contact() {
   }, [state.succeeded]);
 
   return (
-    <section id="contact" className="py-24 px-4 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="contact" className="py-24 px-4 bg-gradient-to-b from-sky-50 to-white">
       <div className="container mx-auto max-w-7xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground font-playfair">Visit Us Today</h2>
-          <p className="text-lg text-muted-foreground">Expert guidance & solutions tailored just for you</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-900 font-serif">Visit Us Today</h2>
+          <p className="text-lg text-sky-700 font-sans">Expert guidance & solutions tailored just for you</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <Card className="bg-card/80 backdrop-blur-sm border-border shadow-xl hover:shadow-2xl hover:shadow-primary/10 transition-all">
+            <Card className="bg-white shadow-lg hover:shadow-xl hover:shadow-sky-100 transition-all">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-semibold mb-6 text-foreground font-playfair">Send Us a Message</h3>
+                <h3 className="text-2xl font-semibold mb-6 text-sky-900 font-serif">Send Us a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <Input type="text" name="user_name" placeholder="Your Name" required className="bg-background border-input focus:border-primary transition-colors" />
+                    <Input type="text" name="user_name" placeholder="Your Name" required className="bg-white border-sky-200 focus:border-sky-500 transition-colors" />
                     <ValidationError prefix="Name" field="user_name" errors={state.errors} />
                   </div>
                   <div>
-                    <Input id="email" type="email" name="email" placeholder="Your Email" required className="bg-background border-input focus:border-primary transition-colors" />
+                    <Input id="email" type="email" name="email" placeholder="Your Email" required className="bg-white border-sky-200 focus:border-sky-500 transition-colors" />
                     <ValidationError prefix="Email" field="email" errors={state.errors} />
                   </div>
                   <div>
-                    <Input type="tel" name="user_phone" placeholder="Phone Number" className="bg-background border-input focus:border-primary transition-colors" />
+                    <Input type="tel" name="user_phone" placeholder="Phone Number" className="bg-white border-sky-200 focus:border-sky-500 transition-colors" />
                     <ValidationError prefix="Phone" field="user_phone" errors={state.errors} />
                   </div>
                   <div>
-                    <Textarea id="message" name="message" placeholder="Your Message" rows={5} required className="bg-background border-input resize-none focus:border-primary transition-colors" />
+                    <Textarea id="message" name="message" placeholder="Your Message" rows={5} required className="bg-white border-sky-200 resize-none focus:border-sky-500 transition-colors" />
                     <ValidationError prefix="Message" field="message" errors={state.errors} />
                   </div>
-                  <Button type="submit" disabled={state.submitting} className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/50 transition-all group">
+                  <Button type="submit" disabled={state.submitting} className="w-full bg-sky-600 hover:bg-sky-700 text-white shadow-lg hover:shadow-sky-200 transition-all group">
                     {state.submitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
 
                 <div className="mt-8 space-y-4">
-                  <div className="flex items-start gap-3 group cursor-pointer hover:bg-primary/5 p-2 rounded-lg transition-colors">
-                    <MapPin className="w-5 h-5 text-primary mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="flex items-start gap-3 group cursor-pointer hover:bg-sky-50 p-2 rounded-lg transition-colors">
+                    <MapPin className="w-5 h-5 text-sky-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
-                      <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Address</p>
-                      <p className="text-sm text-muted-foreground">
+                      <p className="font-semibold text-sky-900 group-hover:text-sky-600 transition-colors font-serif">Address</p>
+                      <p className="text-sm text-sky-700 font-sans">
                         Shop No 3, Samadhan Building, 759/35, Bhandarkar Rd,
                         <br /> near Oak-wood Hotel, Deccan Gymkhana,
                         <br /> Pune, Maharashtra 411004
@@ -65,19 +65,19 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 group cursor-pointer hover:bg-primary/5 p-2 rounded-lg transition-colors">
-                    <Phone className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="flex items-center gap-3 group cursor-pointer hover:bg-sky-50 p-2 rounded-lg transition-colors">
+                    <Phone className="w-5 h-5 text-sky-600 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
-                      <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Phone</p>
-                      <a href="tel:+919372224060" className="text-sm text-muted-foreground hover:text-primary transition-colors">+91 93722 24060</a>
+                      <p className="font-semibold text-sky-900 group-hover:text-sky-600 transition-colors font-serif">Phone</p>
+                      <a href="tel:+919372224060" className="text-sm text-sky-700 hover:text-sky-600 transition-colors font-sans">+91 93722 24060</a>
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 group cursor-pointer hover:bg-primary/5 p-2 rounded-lg transition-colors">
-                    <Mail className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-110 transition-transform" />
+                  <div className="flex items-center gap-3 group cursor-pointer hover:bg-sky-50 p-2 rounded-lg transition-colors">
+                    <Mail className="w-5 h-5 text-sky-600 flex-shrink-0 group-hover:scale-110 transition-transform" />
                     <div>
-                      <p className="font-semibold text-foreground group-hover:text-primary transition-colors">Hours</p>
-                      <p className="text-sm text-muted-foreground">Open: Mon-Sun, 10 AM - 9 PM</p>
+                      <p className="font-semibold text-sky-900 group-hover:text-sky-600 transition-colors font-serif">Hours</p>
+                      <p className="text-sm text-sky-700 font-sans">Open: Mon-Sun, 10 AM - 9 PM</p>
                     </div>
                   </div>
                 </div>

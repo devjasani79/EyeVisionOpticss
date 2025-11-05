@@ -10,7 +10,7 @@ import Footer from "./sections/Footer";
 
 export default function Index() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navbar />
       <WhatsAppButton />
 

@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import FloatingParticles from "@/components/FloatingParticles";
 import { Button } from "@/components/ui/button";
-import heroVideo from "@/assets/6009721_4k_Video_Attractive_3840x2160.mp4";
+import heroVideo from "@/assets/6009721_4k_Video_Attractive_3840x2160.mp4?url";
+import poster from "@/assets/store-1.jpg"; // Using first store image as poster
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -18,10 +19,21 @@ export default function Hero() {
     <section
       ref={heroRef}
       id="home"
-      className="relative h-screen flex items-center justify-center overflow-hidden"
+      className="relative h-screen flex items-center justify-center overflow-hidden will-change-transform"
     >
-      <motion.div style={{ scale: videoScale, opacity: videoOpacity }} className="absolute inset-0 z-0 pointer-events-none">
-        <video autoPlay loop muted playsInline className="w-full h-full object-cover">
+      <motion.div 
+        style={{ scale: videoScale, opacity: videoOpacity }} 
+        className="absolute inset-0 z-0 pointer-events-none transform-gpu"
+      >
+        <video 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          preload="auto"
+          poster={poster}
+          className="w-full h-full object-cover will-change-transform"
+        >
           <source src={heroVideo} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/60 to-background" />
@@ -29,11 +41,11 @@ export default function Hero() {
 
       <FloatingParticles />
 
-      <motion.div
+        <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative z-10 text-center px-4 max-w-5xl mx-auto"
+        className="relative z-10 text-center px-4 max-w-5xl mx-auto transform-gpu"
       >
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-playfair">
           <span className=" animate-shimmer bg-[length:200%_auto]">Sharp. Clear. Visionary.</span>

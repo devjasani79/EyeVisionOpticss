@@ -6,18 +6,18 @@ import store2 from "@/assets/store-2.jpg";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 px-4 bg-gradient-to-b from-white to-sky-50/50 relative overflow-hidden">
-      <div className="absolute top-20 right-10 w-64 h-64 opacity-5">
+    <section id="about" className="py-24 px-4 bg-gradient-to-b from-slate-900 via-slate-800/50 to-white relative overflow-hidden">
+      <div className="absolute top-20 right-10 w-64 h-64 opacity-10">
         <img src={store1} alt="" className="w-full h-full object-cover rounded-3xl rotate-12" />
       </div>
-      <div className="absolute bottom-20 left-10 w-48 h-48 opacity-5">
+      <div className="absolute bottom-20 left-10 w-48 h-48 opacity-10">
         <img src={store2} alt="" className="w-full h-full object-cover rounded-3xl -rotate-12" />
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-sky-900 font-serif">Your One-Stop Destination for Quality Eyewear</h2>
-          <p className="text-lg text-sky-700 max-w-4xl mx-auto leading-relaxed font-sans">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-serif drop-shadow-lg">Your One-Stop Destination for Quality Eyewear</h2>
+          <p className="text-lg text-sky-100 max-w-4xl mx-auto leading-relaxed font-sans">
             We specialize in delivering high-quality prescription spectacles within just 1 hour.
             Looking for numbered sunglasses, coloured contact lenses, power contact lenses?
             We've got you covered with a wide range of brand options.

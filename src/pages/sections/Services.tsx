@@ -16,17 +16,17 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 px-4 bg-gradient-to-b from-sky-50 to-white relative">
+    <section id="services" className="py-24 px-4 bg-gradient-to-b from-white via-slate-50 to-slate-900 relative">
       <div className="container mx-auto max-w-7xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-900 font-serif">Professional Services</h2>
-          <p className="text-lg text-sky-700 font-sans">Comprehensive eye care solutions tailored to your needs</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800 font-serif">Professional Services</h2>
+          <p className="text-lg text-slate-600 font-sans">Comprehensive eye care solutions tailored to your needs</p>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {services.map((service, index) => (
             <motion.div key={service.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} viewport={{ once: true }}>
-              <Card className="h-full bg-white shadow-lg hover:shadow-xl hover:shadow-sky-100 hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
+              <Card className="h-full bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl hover:shadow-slate-300/20 hover:-translate-y-2 transition-all duration-300 group overflow-hidden">
                 <div className="relative h-48 overflow-hidden">
                   <img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-white to-transparent" />

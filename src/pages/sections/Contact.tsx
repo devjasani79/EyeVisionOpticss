@@ -18,16 +18,16 @@ export default function Contact() {
   }, [state.succeeded]);
 
   return (
-    <section id="contact" className="py-24 px-4 bg-gradient-to-b from-sky-50 to-white">
+    <section id="contact" className="py-24 px-4 bg-gradient-to-b from-slate-800 via-slate-100 to-white">
       <div className="container mx-auto max-w-7xl">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-sky-900 font-serif">Visit Us Today</h2>
-          <p className="text-lg text-sky-700 font-sans">Expert guidance & solutions tailored just for you</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-800 font-serif">Visit Us Today</h2>
+          <p className="text-lg text-slate-600 font-sans">Expert guidance & solutions tailored just for you</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }}>
-            <Card className="bg-white shadow-lg hover:shadow-xl hover:shadow-sky-100 transition-all">
+            <Card className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl hover:shadow-slate-300/20 transition-all">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold mb-6 text-sky-900 font-serif">Send Us a Message</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">

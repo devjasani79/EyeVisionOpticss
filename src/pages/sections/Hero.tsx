@@ -28,11 +28,11 @@ export default function Hero() {
           loop 
           muted 
           playsInline 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover brightness-75"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-sky-500/20 to-white/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/90 via-slate-900/70 to-white/20" />
       </motion.div>
 
         <motion.div
@@ -41,16 +41,16 @@ export default function Hero() {
         transition={{ duration: 0.8, delay: 0.2 }}
         className="relative z-10 text-center px-4 max-w-5xl mx-auto transform-gpu"
       >
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-serif text-sky-900">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 font-serif text-white drop-shadow-lg">
           <span>Sharp. Clear. Visionary.</span>
         </h1>
-        <p className="text-xl md:text-2xl text-sky-700 mb-4 font-sans">Where Vision Meets Virtue</p>
-        <p className="text-lg md:text-xl text-sky-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl md:text-2xl text-sky-100 mb-4 font-sans drop-shadow-md">Where Vision Meets Virtue</p>
+        <p className="text-lg md:text-xl text-sky-200 mb-8 max-w-3xl mx-auto drop-shadow-md">
           Curating an unparalleled vision experience through precision and uncompromising refinement.
         </p>
         <Button
           size="lg"
-          className="bg-sky-600 hover:bg-sky-700 text-white shadow-lg hover:shadow-sky-200 transition-all duration-300 group"
+          className="bg-sky-500 hover:bg-sky-600 text-white shadow-lg hover:shadow-sky-400/20 transition-all duration-300 group backdrop-blur-sm"
           onClick={() => {
             document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
           }}

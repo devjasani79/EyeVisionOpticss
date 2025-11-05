@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-sky-100 shadow-lg">
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-lg border-b shadow-lg">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
@@ -34,7 +34,7 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-sky-200 blur-lg rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                 <img src={eyevisionLogo} alt="EYEVISIONOPTICS" className="h-12 w-12 object-contain relative z-10 group-hover:scale-110 transition-transform" />
               </div>
-              <span className="text-xl font-bold text-sky-900 font-serif tracking-wide">EYEVISIONOPTICS</span>
+              <span className="text-xl font-bold hover:text-sky-600 text-white font-serif tracking-wide">EYEVISIONOPTICS</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.href)}
-                  className="relative text-sky-700 hover:text-sky-600 transition-colors font-medium group font-sans"
+                  className="relative text-sky-500 hover:text-sky-600 transition-colors font-medium group font-sans"
                 >
                   {link.name}
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-sky-500 transition-all group-hover:w-full" />
@@ -55,7 +55,7 @@ const Navbar = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden hover:bg-sky-50"
+              className="md:hidden hover:bg-white border-black text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
